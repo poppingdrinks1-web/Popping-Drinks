@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Popping Drinks | Sabores que explotan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--negro:#080808;
+--fucsia:#ff007f;
+--amarillo:#ffcc00;
+--verde:#3ddc84;
+--turquesa:#00d9ff;
+--naranja:#ff7b00;
+--blanco:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--negro);
+color:white;
+}
+
+section{
+padding:90px 8%;
+}
+
+h1,h2,h3{
+font-weight:900;
+}
+
+p{
+line-height:1.8;
+}
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+color:var(--fucsia);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--amarillo);
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+radial-gradient(circle at top right,#ff007f22,#000000);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:5rem;
+margin-bottom:15px;
+background:linear-gradient(
+90deg,
+#ff007f,
+#ffcc00,
+#00d9ff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:1.4rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--amarillo);
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.section-title{
+text-align:center;
+font-size:3rem;
+margin-bottom:50px;
+color:var(--fucsia);
+}
+
+.about{
+text-align:center;
+max-width:1000px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--fucsia);
+}
+
+.card h3{
+color:var(--amarillo);
+margin-bottom:15px;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.drink{
+background:#111;
+padding:30px;
+border-radius:20px;
+border-left:5px solid var(--fucsia);
+}
+
+.drink h3{
+color:var(--amarillo);
+margin-bottom:10px;
+}
+
+.price{
+margin-top:15px;
+font-size:22px;
+font-weight:bold;
+color:var(--verde);
+}
+
+.contact-box{
+background:#111;
+padding:40px;
+border-radius:20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.contact-box p{
+margin:15px 0;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:25px;
+}
+
+.socials a{
+text-decoration:none;
+padding:12px 20px;
+background:#222;
+color:white;
+border-radius:30px;
+transition:.3s;
+}
+
+.socials a:hover{
+background:var(--fucsia);
+}
+
+.map{
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+.footer{
+background:#050505;
+padding:50px 20px;
+text-align:center;
+}
+
+.footer h3{
+color:var(--fucsia);
+margin-bottom:15px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+text-decoration:none;
+z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.nav-links{
+display:none;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+POPPING DRINKS
+</div>
+
+<div class="nav-links">
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#menu">Menú</a>
+<a href="#ubicacion">Ubicación</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>POPPING DRINKS</h1>
+
+<p>
+Sabores que explotan, tradición que nos une
+</p>
+
+<a
+href="https://wa.me/573024388755"
+target="_blank"
+class="btn">
+
+Pedir por WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+<section id="nosotros">
+
+<h2 class="section-title">
+Nuestra Historia
+</h2>
+
+<div class="about">
+
+<p>
+
+Popping Drinks nace en Ibagué para ofrecer experiencias únicas
+a través de la coctelería artesanal.
+
+Cada bebida combina sabor, creatividad y la alegría de nuestra
+cultura colombiana para convertir cualquier momento en una
+celebración inolvidable.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+¿Por qué elegirnos?
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Ingredientes Premium</h3>
+<p>Seleccionamos ingredientes frescos y de alta calidad.</p>
+</div>
+
+<div class="card">
+<h3>Recetas Originales</h3>
+<p>Cócteles exclusivos inspirados en nuestra cultura.</p>
+</div>
+
+<div class="card">
+<h3>Experiencias Únicas</h3>
+<p>Cada bebida está diseñada para sorprender.</p>
+</div>
+
+<div class="card">
+<h3>Atención Personalizada</h3>
+<p>Queremos que cada cliente viva algo memorable.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="menu">
+
+<h2 class="section-title">
+Menú Destacado
+</h2>
+
+<div class="menu-grid">
+
+<div class="drink">
+<h3>Explosión Tropical</h3>
+<p>Ron blanco, mango, maracuyá y limón.</p>
+<div class="price">$18.000</div>
+</div>
+
+<div class="drink">
+<h3>Mojito Folclórico</h3>
+<p>Ron premium, panela y hierbabuena.</p>
+<div class="price">$16.000</div>
+</div>
+
+<div class="drink">
+<h3>Sunset Tolimense</h3>
+<p>Vodka, naranja y frutos rojos.</p>
+<div class="price">$20.000</div>
+</div>
+
+<div class="drink">
+<h3>Popping Blue</h3>
+<p>Vodka, curaçao azul y soda cítrica.</p>
+<div class="price">$19.000</div>
+</div>
+
+<div class="drink">
+<h3>Piña Fiesta</h3>
+<p>Piña colada premium.</p>
+<div class="price">$22.000</div>
+</div>
+
+<div class="drink">
+<h3>Guitar Sunset</h3>
+<p>Tequila, mango biche y tajín.</p>
+<div class="price">$22.000</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="ubicacion">
+
+<h2 class="section-title">
+Ubicación
+</h2>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=ibague%20tolima&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<h2 class="section-title">
+Contáctanos
+</h2>
+
+<div class="contact-box">
+
+<p>
+📱 302 438 8755
+</p>
+
+<p>
+📱 310 526 3572
+</p>
+
+<p>
+✉️ popping.drinks1@gmail.com
+</p>
+
+<div class="socials">
+
+<a
+href="https://instagram.com/popping_drinks1"
+target="_blank">
+Instagram
+</a>
+
+<a
+href="https://facebook.com"
+target="_blank">
+Facebook
+</a>
+
+<a
+href="https://tiktok.com/@popping_drinks1"
+target="_blank">
+TikTok
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h3>
+POPPING DRINKS
+</h3>
+
+<p>
+Sabores que explotan, tradición que nos une
+</p>
+
+<br>
+
+<p>
+Ibagué • Tolima • Colombia
+</p>
+
+<br>
+
+<p>
+© 2026 Popping Drinks
+</p>
+
+</footer>
+
+<a
+href="https://wa.me/573024388755"
+target="_blank"
+class="whatsapp">
+🍹
+</a>
+
+</body>
+</html>
