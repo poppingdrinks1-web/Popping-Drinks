@@ -1,0 +1,265 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--fucsia:#ff008c;
+--amarillo:#ffcc00;
+--turquesa:#00d9ff;
+--verde:#a8d600;
+--negro:#050505;
+}
+
+body{
+background:var(--negro);
+color:white;
+}
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.9);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo-nav{
+font-size:1.5rem;
+font-weight:900;
+color:var(--fucsia);
+}
+
+
+nav a{
+font-family:'Poppins',sans-serif;
+font-weight:600;
+font-size:1rem;
+letter-spacing:1px;
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--amarillo);
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
+background:
+radial-gradient(circle at top right,#ff008c33,transparent),
+radial-gradient(circle at bottom left,#00d9ff22,transparent);
+}
+
+.hero-logo{
+width:400px;
+max-width:90%;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-family:'Permanent Marker',cursive;
+font-size:6rem;
+margin-bottom:15px;
+line-height:1.1;
+
+background:linear-gradient(
+90deg,
+#ff008c,
+#ffcc00,
+#00d9ff
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+filter:drop-shadow(0 0 15px rgba(255,0,140,.4));
+}
+
+.hero p{
+font-size:1.4rem;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:var(--amarillo);
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:50px;
+}
+
+.btn-secondary{
+background:var(--fucsia);
+color:white;
+}
+
+.festival-banner{
+padding:25px 20px;
+background:#d63384;
+text-align:center;
+color:white;
+}
+
+.festival-banner h2{
+font-family:'Permanent Marker',cursive;
+font: size 2.5em;rem;
+font-weight:700;
+letter-spacing:2px;
+color:white;
+margin-bottom:5px;
+}
+
+.festival-banner p{
+font-size:1rem;
+color:white;
+opacity:.9;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+section{
+padding:100px 8%;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+.hero{
+border-top:none !important;
+}
+
+h2{
+font-family:'Permanent Marker',cursive;
+font-size:3rem;
+margin-bottom:25px;
+color:var(--fucsia);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.card h3{
+color:var(--amarillo);
+margin-bottom:10px;
+}
+
+.card span{
+display:block;
+margin-top:15px;
+font-size:1.2rem;
+font-weight:bold;
+color:var(--verde);
+}
+
+.socials{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.socials a{
+padding:12px 20px;
+background:#111;
+border-radius:30px;
+text-decoration:none;
+color:white;
+}
+
+.socials a:hover{
+background:var(--fucsia);
+}
+
+footer{
+background:#000;
+padding:50px 20px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3.8rem;
+}
+nav{
+display:none;
+}
+
+h2{
+font-size:2rem;
+}
+
+.hero-logo{
+width:280px;
+}
+
+}
+
+.section-description{
+max-width:700px;
+margin:0 auto 40px auto;
+font-size:1.1rem;
+opacity:.85;
+text-align:center;
+}
+
+.map-container{
+margin-top:40px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+border:1px solid rgba(255,255,255,.08);
+}
